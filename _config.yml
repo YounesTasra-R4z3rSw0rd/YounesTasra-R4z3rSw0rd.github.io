@@ -16,17 +16,17 @@ lang: en
 prefer_datetime_locale:
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: Africa/Casablanca
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
 title: Younes Tasra                          # the main title
 
-tagline: Cybersecurity Engineering Student's blog  # it will display as the sub-title
+tagline: Cybersecurity Engineering Student   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Hello world
+  Passion never fails
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://YounesTasra-R4z3rSw0rd.github.io'
@@ -40,7 +40,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Younes Tasra's Security Blog.
+  name: Younes Tasra
   email: tasra.younes@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -75,7 +75,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode:   # [light|dark]
+theme_mode:   dark # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
@@ -85,7 +85,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://avatars.githubusercontent.com/u/101610095?s=400&u=41e3e9eb826536b3ba3d3607790b1f410713ca8e&v=4
+avatar: https://media-exp1.licdn.com/dms/image/C5603AQEYhfBR2RQJ6A/profile-displayphoto-shrink_400_400/0/1651766188046?e=1666828800&v=beta&t=yYa2kVC6ETN6I1lTpXFrO_hpu1Z7mAgOe3RjkGI2DWw
 
 # boolean type, the global switch for ToC in posts.
 toc: true
