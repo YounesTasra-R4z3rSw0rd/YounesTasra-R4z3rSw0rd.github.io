@@ -15,7 +15,7 @@ order: 4
 >> * <font color="DarkGray"><em><strong>Python, C, PHP, JavaScript, HTML, Bash, SQL, x86 Assembly (Basics)</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Penetration Testing</font></strong>**
->> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Wireshark, Dirb, SQLMap, OWASP ZAP, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare</strong></em>
+>> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Wireshark, Dirb, SQLMap, OWASP ZAP, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare, Yara</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Network Protocols & Services</font></strong>**
 >> * <font color="DarkGray"><em><strong>DHCP, DNS, SAMBA, FTP, SSH, Telnet, HTTP, SMTP, POP, IMAP, MySQL, ICMP, TCP/IP</strong></em>
@@ -26,6 +26,7 @@ order: 4
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-EVE2J89GW2.png" target="_blank">TryHackMe's Pre Security Learning Path</a>
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MOFJTQRL4H.png" target="_blank">TryHackMe's Web Fundamentals Learning Path</a>
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-6WCF4ADN1N.png" target="_blank">TryHackMe's Jr. Penetration Tester Learning Path</a>
+> * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-WJ5PWWPBJX.png" target="_blank">TryHackMe's Advent of Cyber 2021</a>
 > * <a href="https://www.sololearn.com/Certificate/CT-NGSDCGIC/jpg" target="_blank">Sololearn's PHP Course Certificate</a>
 > * <a href="https://www.sololearn.com/Certificate/CT-8ZLLOQYM/png" target="_blank">Sololearn's JavaScript Course Certificate</a>
 > * <a href="https://www.hackerrank.com/certificates/b1b376eabd3d" target="_blank">HackerRank's SQL Certificate</a>
