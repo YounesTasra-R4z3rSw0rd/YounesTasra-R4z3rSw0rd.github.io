@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://younestasra-r4z3rsw0rd.github.io/sitemap.xml
