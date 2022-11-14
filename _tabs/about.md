@@ -12,10 +12,10 @@ order: 4
  
 > ## **<strong><font color="Brown">Skills</font></strong>**
 >> ### **<strong><font color="DarkCyan">Programming Languages</font></strong>**
->> * <font color="DarkGray"><em><strong>Python, C, PHP, JavaScript, HTML, Bash, SQL, x86 Assembly (Basics)</strong></em>
+>> * <font color="DarkGray"><em><strong>Python, C, PHP, JavaScript, HTML, Bash, SQL, x86 Assembly, Java</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Penetration Testing</font></strong>**
->> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Wireshark, Dirb, SQLMap, OWASP ZAP, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare, Yara, Oletools, Autopsy, Redline</strong></em>
+>> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Bloodhound, Wireshark, Dirb, SQLMap, OWASP ZAP, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare, Yara, Oletools, Autopsy, Redline, Splunk, Snort, ELK</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Network Protocols & Services</font></strong>**
 >> * <font color="DarkGray"><em><strong>DHCP, DNS, SAMBA, FTP, SSH, Telnet, HTTP, SMTP, POP, IMAP, MySQL, ICMP, TCP/IP, TLS/SSL</strong></em>
