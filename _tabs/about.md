@@ -12,7 +12,7 @@ order: 4
  
 > ## **<strong><font color="Brown">Skills</font></strong>**
 >> ### **<strong><font color="DarkCyan">Programming Languages</font></strong>**
->> * <font color="DarkGray"><em><strong>Python, C, PHP, JavaScript, HTML, Bash, SQL, x86 Assembly, Java</strong></em>
+>> * <font color="DarkGray"><em><strong>Python, C, Java, PHP, JavaScript, HTML, Bash, SQL, x86 Assembly (Basics)</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Penetration Testing</font></strong>**
 >> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Bloodhound, Wireshark, Dirb, SQLMap, OWASP ZAP, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare, Yara, Oletools, Autopsy, Redline, Splunk, Snort, ELK</strong></em>
@@ -26,6 +26,7 @@ order: 4
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-EVE2J89GW2.png" target="_blank">TryHackMe's Pre Security Learning Path</a>
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MOFJTQRL4H.png" target="_blank">TryHackMe's Web Fundamentals Learning Path</a>
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-6WCF4ADN1N.png" target="_blank">TryHackMe's Jr. Penetration Tester Learning Path</a>
+> * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-W16NF6ASEA.png" target="_blank">TryHackMe's Offensive Security Learning Path</a>
 > * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-WJ5PWWPBJX.png" target="_blank">TryHackMe's Advent of Cyber 2021</a>
 > * <a href="https://www.sololearn.com/Certificate/CT-NGSDCGIC/jpg" target="_blank">Sololearn's PHP Course Certificate</a>
 > * <a href="https://www.sololearn.com/Certificate/CT-8ZLLOQYM/png" target="_blank">Sololearn's JavaScript Course Certificate</a>
@@ -35,6 +36,7 @@ order: 4
 
 > ## **<strong><font color="Brown">My Profiles</font></strong>**
 > * <a href="https://tryhackme.com/p/R4z3rSw0rd" target="_blank">My TryHackMe's Profile</a>
+> * <a href="https://app.hackthebox.com/users/970515" target="_blank">My HackTheBox's Profile</a>
 > * <a href="https://cybertalents.com/members/R4z3rSw0rd/profile" target="_blank">My CyberTalents's Profile</a>
 
 > ## **<strong><font color="Brown">About the Blog</font></strong>**
