@@ -55,7 +55,7 @@ SELECT * FROM products WHERE category = '' OR 'a'='a' AND released = 1
 
 * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Web-Security-Academy/blob/main/SQL%20Injection/Lab%231/requirements.txt" target="_blank"><er>Requirements</er></a>:
 ```console
-$ pip3 install -m requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 * Help Menu:
@@ -114,7 +114,7 @@ SELECT * FROM content WHERE username='randomusername' OR 1=1--' AND password='p@
 
 * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Web-Security-Academy/blob/main/SQL%20Injection/Lab%232/requirements.txt" target="_blank"><er>Requirements</er></a>:
 ```console
-$ pip3 install -m requirements.txt
+$ pip3 install -r requirements.txt
 ```
 * Help Menu:
 
@@ -174,7 +174,7 @@ The goal of this lab is to figure out the number of columns returned by the quer
 
 * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Web-Security-Academy/blob/main/SQL%20Injection/Lab%233/requirements.txt" target="_blank"><er>Requirements</er></a>:
 ```console
-$ pip3 install -m requirements.txt
+$ pip3 install -r requirements.txt
 ```
 * Help Menu:
 
@@ -246,7 +246,7 @@ To do so, we will incrementally submit a series of ```UNION SELECT``` payloads t
 
 * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Web-Security-Academy/blob/main/SQL%20Injection/Lab%234/requirements.txt" target="_blank"><er>Requirements</er></a>:
 ```console
-$ pip3 install -m requirements.txt
+$ pip3 install -r requirements.txt
 ```
 * Help Menu:
 
@@ -469,7 +469,7 @@ root@kali# sqlmap --proxy=http://127.0.0.1:8080 -u 'https://0aa8007d033d30a9c0f2
 * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Web-Security-Academy/blob/main/SQL%20Injection/Lab%235/requirements.txt" target="_blank"><er>Requirements</er></a>:
 
 ```console
-$ pip3 install -m requirements.txt
+$ pip3 install -r requirements.txt
 ```
 * Help Menu:
 
@@ -607,7 +607,7 @@ root@kali# sqlmap --proxy=http://127.0.0.1:8080 -u 'https://0aa8007d033d30a9c0f2
 * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Web-Security-Academy/blob/main/SQL%20Injection/Lab%236/requirements.txt" target="_blank"><er>Requirements</er></a>:
 
 ```console
-$ pip3 install -m requirements.txt
+$ pip3 install -r requirements.txt
 ```
 * Help Menu:
 
