@@ -43,7 +43,9 @@ There is a JavaScript code in the code source of the web page which reveals some
 * The code checks if the `document.cookie` is not an empty string. It then extracts the value of the `PHPSESSID` cookie using regular expression match ``document.cookie.match(/PHPSESSID=([^;]+)/)[1]``
 * Next, it sends a ``POST`` request to the server using `$.post()` method. The request is made to the `getcurrentuserinfo.php` endpoint, and the `PHPSESSID` value is included as a parameter in the request body.
 * If the server responds successfully, the callback function specified as the 3rd argument of the `$.post()` method will be executed. The `data` parameter of the callback function will contain the response from the server. In this case, it assigns the response data to the variable `cu`.
+
 <br/>
+
 In other words, when a user visit the main page, the JavaScript code will check if the `PHPSESSID` cookie is set and has a value. If it's the case, it will send a POST request to `getcurrentuserinfo.php` endpoint, which will retrieve the current user information based on the provided PHP session ID. The response from the server is then stored in the `cu` variable. 
 
 #### **<strong><font color="DarkKhaki">Stored sessions:</font></strong>**
@@ -53,17 +55,15 @@ curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=1234567'
 ```
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_14_31-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Requesting the main page with PHPSESSID cookie</i></center>
-<br/>
 
 * The response says that the provided `PHPSESSID` does not figure in `data/session_store.txt` file.
 
-Let's GET the content of this file, by running the following command:
+Let's ``GET`` the content of this file, by running the following command:
 ```shell
 curl http://shfjhg&.cybertalentslabs.com/data/session_store.txt
 ```
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_17_42-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Stored sessions</i></center>
-<br/>
 
 * It looks like this file contains some PHPSESSID values (3 to be exact).
 
@@ -73,7 +73,6 @@ curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=iuqwhe23eh23kej2h
 ```
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_20_12-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>UserInfo Cookie</i></center>
-<br/>
 
 * The response implies that we need another cookie named `UserInfo` that needs to be sent along with `PHPSESSID`
 
@@ -83,7 +82,6 @@ curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=iuqwhe23eh23kej2h
 ```
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_22_36-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Validation failed</i></center>
-<br/>
 
 * As expected, we got a `Validation failed` message as a response from the server.
 
@@ -99,7 +97,6 @@ curl -X POST http://shfjhg&.cybertalentslabs.com -d 'PHPSESSID=iuqwhe23eh23kej2h
 ```
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_32_34-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>JSON data</i></center>
-<br/>
 
 * The response is ``JSON`` data, which contains information of the user with the PHP session ID we provided.
 

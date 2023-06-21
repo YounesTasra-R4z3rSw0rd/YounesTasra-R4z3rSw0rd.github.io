@@ -40,26 +40,28 @@ But, when an input that does not look like an email address, the web page will r
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-newsletter/2023-06-17 23_56_04-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Invalid email address</i></center>
-<br/>
 
-* From the message `Invalid email, email must contain @ & dot`, we can assume that the user input is checked whether it contains `@` and `dot` or `.` If it's the case, the email address is inserted, otherwise this error message is returned.
+* From the message `Invalid email, email must contain @ & dot`, we can assume that the user input is checked whether it contains `@` and `dot` or `.` If it's the case, the email address is successfully inserted, otherwise this error message is returned.
 
 ### **<strong><font color="DarkCyan">Manual Exploitation</font></strong>**
 #### **<strong><font color="DarkKhaki">Bypassing the check:</font></strong>**
-We can easily bypass this check by simply providing an input that contains `@` and `.` It can be as simple as the following input: `@.`
+We can easily bypass this check by simply providing an input that contains `@` and `.` 
+<br/>
+It can be as simple as the following input: `@.`
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-newsletter/2023-06-18 00_00_52-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Email Check Bypassed</i></center>
 <br/>
 
 #### **<strong><font color="DarkKhaki">Command Injection:</font></strong>**
-Let's try to inject an OS command like `id` while making sure to bypass the check. We can do that by injecting the following command: `;id #@.`
+Let's try to inject an OS command like `id` while making sure to bypass the check. 
+<br/>
+We can do that by injecting the following payload: `;id #@.`
 * Here we are executing the `id` command and commenting `@.` in order not to be executed.
 * The semi-colon `;` in the beginning is just to separate our command with the command executed in the backend.
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-newsletter/2023-06-18 00_07_01-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>id</i></center>
-<br/>
 
 * As you can see, the `id` command has been executed in the backend server, which means this entry point is vulnerable to command injection.
 
@@ -68,12 +70,11 @@ In this challenge, the flag is the name of a backup file, which is located in th
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-newsletter/2023-06-18 00_10_27-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Flag</i></center>
-<br/>
 
 * The backup filename is `hgdr64.backup.tar.gz`
 
 ### **<strong><font color="DarkCyan">Exploitation using Commix:</font></strong>**
-[Commix](https://github.com/commixproject/commix) short for [comm]and [i]njection e[x]ploiter, is an open-source penetration testing tool that automates the detection and exploitation of `Command Injection` vulnerabilities. 
+[Commix](https://github.com/commixproject/commix) short for [``comm``]and [`i`]njection e[`x`]ploiter, is an open-source penetration testing tool that automates the detection and exploitation of `Command Injection` vulnerabilities. 
 <br/>
 You can think of it as `SQLmap` but for `Command Injection` rather than `SQL injection` vulnerabilities.
 
@@ -83,7 +84,6 @@ You can enable this mode using the option `--wizard`:
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-newsletter/2023-06-18 00_26_24-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Command Injection via Commix</i></center>
-<br/>
 
 * First of all, it will ask you for the URL, the ``POST`` data you want to test for command injection (`email=hacker@gmail.com`), the injection level (`3`) and finally the target server's operating system.
 * After doing its thing, if successful (Command Injection exploited), it will ask you whether you want a pseudo-terminal shell where you can execute commands remotely on the target server.
