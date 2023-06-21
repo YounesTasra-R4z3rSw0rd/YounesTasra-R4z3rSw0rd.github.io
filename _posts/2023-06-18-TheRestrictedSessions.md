@@ -3,19 +3,18 @@ layout: post
 title: CyberTalents | The Restricted Sessions
 date: 2023-06-18 12:00:00 -500
 categories: [CyberTalents, Medium]
-tags: [ctf, Web Exploitation, Cookies, Sessions, Sensitive data exposure, cURL, Firefox DevTools]
+tags: [ctf, CyberTalents, Web Exploitation, Session Hijacking, Cookies, Sessions, Sensitive data exposure, cURL, Firefox DevTools]
 ---
 
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/cybertalents.jpeg">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/cybertalents.jpeg" width="738" height="223">
 
 ***
 
-<center><strong><font color="DarkGray"><a href="https://cybertalents.com/challenges/web/the-restricted-sessions" target="_blank"><er>Git Happens</er></a> is a vulnerable machine from TryHackMe where there is a web server running on port 80, which has an exposed .git folder, allowing the access to the source code of the application and ultimately gain access to the super secret password of the admin user.</font></strong></center>
+<center><strong><font color="DarkGray"><a href="https://cybertalents.com/challenges/web/the-restricted-sessions" target="_blank"><er>The Restricted Sessions</er></a> is a Web Exploitation challenge from CyberTalents, where the flag could only be viewed by logged in users. Additionally, there is no apparent login form, which means working with sessions and cookies was necessary to successfully authenticate as one of the already logged in user and get the flag.</font></strong></center>
 
 ***
 
 ## **<strong><font color="Brown">Challenge Name</font></strong>**
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-21 01_42_16-The Restricted Sessions » CyberTalents — Mozilla Firefox.png">
 <center><i>The Restricted Sessions Challenge</i></center>
 <br/>
@@ -32,7 +31,7 @@ Navigating to the provided URL, you will be presented with the following web pag
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 21_55_21-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Main page</i></center>
 <br/>
-It says that the flag can only be seen to logged-in users, and since there is no logging page that we can play with and given the challenge name, it is certainly about ``Cookies`` and ``Sessions``.
+It says that the flag can only be seen to logged-in users, and since there is no login form and given the challenge name, it is certainly about ``Cookies`` and ``Sessions``.
 
 #### **<strong><font color="DarkKhaki">Source Code:</font></strong>**
 There is a JavaScript code in the code source of the web page which reveals something very interesting regarding the logic behind the check of logged-in users.
@@ -52,7 +51,6 @@ With that being said, let's send a request, using `curl`, to the main page `/` w
 ```shell
 curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=1234567'
 ```
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_14_31-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Requesting the main page with PHPSESSID cookie</i></center>
 <br/>
@@ -63,7 +61,6 @@ Let's GET the content of this file, by running the following command:
 ```shell
 curl http://shfjhg&.cybertalentslabs.com/data/session_store.txt
 ```
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_17_42-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Stored sessions</i></center>
 <br/>
@@ -74,7 +71,6 @@ Let's try one of them and send a request to the main page:
 ```shell
 curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=iuqwhe23eh23kej2hd2u3h2k23'
 ```
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_20_12-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>UserInfo Cookie</i></center>
 <br/>
@@ -85,7 +81,6 @@ Unfortunately, we don't have a valid username, but let's send a random username 
 ```shell
 curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=iuqwhe23eh23kej2hd2u3h2k23; UserInfo=admin'
 ```
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_22_36-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Validation failed</i></center>
 <br/>
@@ -93,7 +88,7 @@ curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=iuqwhe23eh23kej2h
 * As expected, we got a `Validation failed` message as a response from the server.
 
 #### **<strong><font color="DarkKhaki">What's happening in the backend ?</font></strong>**
-In the backend, when we sent the latter request (the one with ``PHPSESSID`` and ``UserInfo`` cookies), the JavaScript code (the one we analyzed earlier) will send a ``POST`` request to `/getcurrentuserinfo.php` endpoint with the value of `PHPSESSID` as a parameter. After that, the server will respond with information of the user holding the PHP session ID. 
+In the backend, when we sent the latter request (the one with ``PHPSESSID`` and ``UserInfo`` cookies), the JavaScript code (the one we analyzed earlier) is executed and will send a ``POST`` request to `/getcurrentuserinfo.php` endpoint with the value of `PHPSESSID` as a parameter. After that, the server will respond with information regarding the user holding the PHP session ID. 
 <br/>
 This information may include the ``username``, which will be compared to the `UserInfo` Cookie. If it matches, the validation is valid. Otherwise, a `Validation failed` message is returned from the server.
 
@@ -102,7 +97,6 @@ Let's manually send a POST request, using `curl` as always, to this endpoint whi
 ```shell
 curl -X POST http://shfjhg&.cybertalentslabs.com -d 'PHPSESSID=iuqwhe23eh23kej2hd2u3h2k23'
 ```
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_32_34-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>JSON data</i></center>
 <br/>
@@ -116,7 +110,6 @@ At this point, we have a valid PHP session ID and a valid username. All that's l
 ```shell
 curl http://shfjhg&.cybertalentslabs.com -H 'Cookie: PHPSESSID=iuqwhe23eh23kej2hd2u3h2k23; UserInfo=john'
 ```
-<br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/cybertalents-therestrictedsessions/2023-06-17 22_37_17-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Flag via cURL</i></center>
 <br/>
