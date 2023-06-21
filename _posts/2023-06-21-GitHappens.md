@@ -1,9 +1,9 @@
 ---
 layout: post
-title: TryHackMe | Git Happens Write-Up   
-date: 2023-05-1 12:00:00 -500
+title: TryHackMe | Git Happens
+date: 2023-06-20 12:00:00 -500
 categories: [TryHackMe, Easy]
-tags: [ctf, nmap, Web Exploitation, Git Repository, .git, Sensistive data exposure, Information disclosure, git]
+tags: [ctf, nmap, Web Exploitation, Git Repository, .git, Sensitive data exposure, Information disclosure, git]
 ---
 
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/My-Files/main/THM-Header.png">
@@ -57,14 +57,14 @@ Nmap done: 1 IP address (1 host up) scanned in 15.98 seconds
 
 Navigating to `http://MACHINE_IP`, you will be presented with a login form, where you can enter a username and a password in order to login:
 <br/>
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-20 20_14_07-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_14_07-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>login page</i></center>
 <br/>
 
 #### **<strong><font color="MediumPurple">Downloading /.git</font></strong>**
 Since we already know the presence of a `Git Repository`, which might contain the source code of the application, in `http://MACHINE_IP/.git`,
 <br/>
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-20 20_18_24-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_18_24-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>/.git</i></center>
 <br/>
 
@@ -75,7 +75,7 @@ wget -r http://MACHINE_IP/.git
 * This command will download the contents of the Git repository located at `http://MACHINE_IP/.git`, including the source code, commit history and other associated files, by traversing the directory structure within the Git repo and retrieve all accessible files.
 
 <br/>
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-20 20_21_34-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_21_34-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Downloading .git folder</i></center>
 <br/>
 
@@ -87,7 +87,7 @@ git log
 * This command will display the commit history in a Git repo, by presenting detailed information about each commit, including the commit hash, author, date and commit message (Comment)
 
 <br/>
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-20 20_30_28-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_30_28-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>git log</i></center>
 <br/>
 
@@ -95,7 +95,7 @@ On the other hand, the below command provides a more concise output, by displayi
 ```bash
 git log --oneline
 ```
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-20 20_32_11-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_32_11-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>git log --oneline</i></center>
 <br/>
 
@@ -105,7 +105,7 @@ To display the differences between the current state of the repository and this 
 ```bash
 git diff 395e087
 ```
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-20 20_43_35-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_43_35-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>git diff</i></center>
 <br/>
 
@@ -114,6 +114,6 @@ git diff 395e087
 #### **<strong><font color="SteelBlue">Flag:</font></strong>**
 With that said, we have found the super secret password, and all we need to do is submit it in order to complete the challenge:
 <br/>
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-opacity/2023-06-21 00_06_48-TryHackMe _ Git Happens — Mozilla Firefox.png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-21 00_06_48-TryHackMe _ Git Happens — Mozilla Firefox.png">
 <center><i>super secret password</i></center>
 <br/>

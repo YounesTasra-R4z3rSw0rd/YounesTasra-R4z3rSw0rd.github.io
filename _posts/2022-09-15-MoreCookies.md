@@ -1,9 +1,9 @@
 ---
 layout: post
-title: PicoCTF | More Cookies Write-Up   
+title: PicoCTF | More Cookies
 date: 2022-09-15 12:00:00 -500
 categories: [PicoCTF, Web Exploitation]
-tags: [PicoCTF2021, Web, Cookies, base64, Cryptography, AES, AES-CBC, AES-ECB, Block Cipher, Homomorphic Encryption, Bit-Flipping Attack, Python3]
+tags: [PicoCTF2021, Web Exploitation, Cookies, base64, Cryptography, AES, AES-CBC, AES-ECB, Block Cipher, Homomorphic Encryption, Bit-Flipping Attack, Python3]
 ---
 
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra.github.io_Img/main/PicoCTF.jpg">
