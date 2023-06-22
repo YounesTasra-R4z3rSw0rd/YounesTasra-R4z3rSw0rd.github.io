@@ -59,7 +59,6 @@ Navigating to `http://MACHINE_IP`, you will be presented with a login form, wher
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_14_07-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>login page</i></center>
-<br/>
 
 #### **<strong><font color="MediumPurple">Downloading /.git</font></strong>**
 Since we already know the presence of a `Git Repository`, which might contain the source code of the application, in `http://MACHINE_IP/.git`,
@@ -77,7 +76,6 @@ wget -r http://MACHINE_IP/.git
 <br/>
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_21_34-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>Downloading .git folder</i></center>
-<br/>
 
 #### **<strong><font color="MediumPurple">Enumerating .git:</font></strong>**
 When it comes to `.git` enumeration, the first command that I like to run is:
@@ -107,7 +105,6 @@ git diff 395e087
 ```
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/thm-githappens/2023-06-20 20_43_35-HACKING_MACHINE - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>git diff</i></center>
-<br/>
 
 * As you can see from this output, some changes has been made to the file `index.html`, including the removal of the JavaScript function `login()` which performs a check on the values of `username` and `password`, stored in plaintext.
 
