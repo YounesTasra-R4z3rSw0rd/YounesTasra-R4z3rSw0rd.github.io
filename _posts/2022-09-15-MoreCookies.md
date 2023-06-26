@@ -99,8 +99,6 @@ auth_name = L2M0a3lRaUd2bGNCcytsREhNTUNzSjhqQlQ3djljUCszeGl5RFlFdWlTQlc5b0c5ZW1I
 * **In other words, ```CBC``` mode links the output of one block to the input of the next block, which essentially ```randomise``` the encryption and hence generate distinct ciphertexts even if the same plaintext is encrypted multiple times.**
 * **For the first block, we use something called an ```Initialization Vector``` (IV), which is nothing more than a ```random array of bytes``` that has the same length of the blocks.**
 <br/>
-
-* **Let's see the visual representation of the algorithm below :**
 <figure><center><img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra.github.io_Img/main/CBC%20Encrypt.png"></center><center><em><figcaption>Cipher Block Chaining (CBC) mode Encryption</figcaption></em></center></figure>
 
 ***
@@ -116,7 +114,7 @@ auth_name = L2M0a3lRaUd2bGNCcytsREhNTUNzSjhqQlQ3djljUCszeGl5RFlFdWlTQlc5b0c5ZW1I
 ***
 
 * **Now that we understand how ```CBC``` works, we can now talk about ```Bit-Flipping``` attack.**
-* **The main vulnerable part of ```CBC``` is that, it relies on the previous ciphertext block in order to encrypt/decrypt the next plaintext/ciphertext block, and this exactly where the ```Bit-Flipping``` attack comes into play.**
+* **The main vulnerable part of ```CBC``` is that, it relies on the previous ciphertext block in order to encrypt/decrypt the next plaintext/ciphertext block, and this is exactly where the ```Bit-Flipping``` attack comes into play.**
 * **Let's see the visual representation of this attack in order to better understand how it works :**
 <figure><center><img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra.github.io_Img/main/Bit-Flipping.png"></center><center><em><figcaption>CBC Bit-Flipping Attack</figcaption></em></center></figure>
 
@@ -175,7 +173,7 @@ Raw_Cookie: b'\xd0R\x1e\x83\xd3\xe0\x1f!c\xb9"\xf8\x96\xd6)m\xb3z_EH\xf1\x94(j\x
 
 * **Now, let's write the ```exploit``` where the ```Bit-Flipping``` process is going to take place.**
 > 1. First, we define a ```loop``` to iterate over ```every single byte``` in the ```Raw_Cookie```;
-> 2. Then, we define another nested ```loop``` need to iterate over ```every single bit``` in the current byte of every iteration, given that every byte contains 8 bits ```(1-Byte = 8-bits)```;
+> 2. Then, we define another nested ```loop``` to iterate over ```every single bit``` in the current byte of every iteration, given that every byte contains 8 bits ```(1-Byte = 8-bits)```;
 > 3. Then, we take ```every byte of every iteration``` and ```xor``` it with ```another byte``` where all bits are set to ```zero``` except the bit at the position 'bit_index' which going to be set to ```one```;
 > 4. ```Base64``` encode twice the generated cookie from the 3rd step;
 > 5. Send a ```GET request``` with the new cookie; 
