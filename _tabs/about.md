@@ -7,7 +7,7 @@ order: 4
 > ## **<strong><font color="Brown">About Me</font></strong>**
 > * <font color="DarkGray">My name is <strong>Younes Tasra</strong>, and I am a <strong>Cybersecurity Engineering Student</strong> at <em>National School of Applied Sciences of Oujda</em>, Morocco.</font>
 > * <font color="DarkGray">I am a proactive learner who seeks to expand my knowledge and skills in cybersecurity through the use of online platforms such as <strong><em>TryHackMe</em></strong>, <strong><em>HackTheBox</em></strong>, and other CTF platforms.</font>
-> * <font color="DarkGray">I have keen interest in Ethical Hacking, Offensive Security, Red Teaming, Network & Web Application Penetration Testing.</em></strong></font>
+> * <font color="DarkGray">I have keen interest in <strong>Ethical Hacking</strong>, <strong>Offensive Security</strong>, <strong>Red Teaming</strong>, <strong>Network & Web Application Penetration Testing</strong>.</font>
 
 > ## **<strong><font color="Brown">Projects</font></strong>**
 > * <a href="https://github.com/YounesTasra-R4z3rSw0rd/Wireless-Toolkit/" target="_blank">Wireless-Toolkit Framework</a>
@@ -21,7 +21,7 @@ order: 4
 >> * <font color="DarkGray"><em><strong>Python, C, PHP, JavaScript, HTML, Bash, SQL, x86 Assembly, Java</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Penetration Testing</font></strong>**
->> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Bloodhound, Wireshark, Dirb, SQLMap, OWASP ZAP, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare, Yara, Oletools, Autopsy</strong></em>
+>> * <font color="DarkGray"><em><strong>Kali Linux, BurpSuite, Nmap, Metasploit, Nessus, Bloodhound, Wireshark, SQLMap, JohnTheRipper, Hashcat, Hydra, Aircrack-ng, Ghidra, IDA, Radare2, Autopsy</strong></em>
 >
 >> ### **<strong><font color="DarkCyan">Network Protocols & Services</font></strong>**
 >> * <font color="DarkGray"><em><strong>DHCP, DNS, SAMBA, FTP, SSH, Telnet, HTTP, SMTP, POP, IMAP, MySQL, ICMP, TCP/IP, TLS/SSL</strong></em>
