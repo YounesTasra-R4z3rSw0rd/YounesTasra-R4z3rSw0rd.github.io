@@ -10,7 +10,7 @@ tags: [ctf, nmap, ffuf, ssh, virtual-hosts, hash-cracking, LaTeX-injection, LFI,
 
 ***
 
-<center><strong><font color="DarkGray"><a href="https://app.hackthebox.com/machines/Topology" target="_blank"><er>Topology</er></a> is a vulnerable machine on HackTheBox. It features an HTTP server with three virtual hosts, including a LaTeX Equation Generator susceptible to LFI vulnerabilities via LaTeX injection. Further exploitation leads to tehe xtraction of credentials that can be used to gain access on the server. Once inside, there is a script that runs every minute with root privileges, executing every plot file within a specific directory. To escalate privileges and obtain a root shell on the box, all it takes is writing a malicious plot file, inside this directory, that provides a reverse shell when executed.</font></strong></center>
+<center><strong><font color="DarkGray"><a href="https://app.hackthebox.com/machines/Topology" target="_blank"><er>Topology</er></a> is a vulnerable machine on HackTheBox. It features an HTTP server with three virtual hosts, including a LaTeX Equation Generator susceptible to LFI vulnerabilities via LaTeX injection. Further exploitation leads to the extraction of credentials that can be used to gain access on the server. Once inside, there is a script that runs every minute with root privileges, executing every plot file within a specific directory. To escalate privileges and obtain a root shell on the box, all it takes is writing a malicious plot file, inside this directory, that provides a reverse shell when executed.</font></strong></center>
 
 ***
 
