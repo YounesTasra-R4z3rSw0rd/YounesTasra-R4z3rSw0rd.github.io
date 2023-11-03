@@ -6,7 +6,7 @@ categories: [HackTheBox, Easy]
 tags: [ctf, nmap, ffuf, ssh, virtual-hosts, hash-cracking, LaTeX-injection, LFI, gnuplot, pspy64, plot-file-injection]
 ---
 
-<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/htb-gofer/Topology.png">
+<img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/htb-topology/Topology.png">
 
 ***
 
