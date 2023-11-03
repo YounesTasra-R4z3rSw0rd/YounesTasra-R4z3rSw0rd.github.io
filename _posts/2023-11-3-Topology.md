@@ -63,7 +63,7 @@ Iâ€™ll temporarily suspend the enumeration of this service, just in case I donâ€
 ### **<strong><font color="DarkCyan">HTTP - 80</font></strong>**
 #### **<strong><font color="DarkKhaki">Front Page</font></strong>**
 
-* Navigating to http://10.10.11.217/, we see the home page of the '*Topology Group*':
+* Navigating to *`http://10.10.11.217/`*, we see the home page of the '*Topology Group*':
 
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/htb-topology/2023-10-08 22_35_23-KaliLinux - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>http://10.10.11.217</i></center>
@@ -93,7 +93,7 @@ Iâ€™ll temporarily suspend the enumeration of this service, just in case I donâ€
 $ echo '10.10.11.217  topology.htb' >> /etc/hosts
 ```
 
-* In the '*Software projects*' section, clicking on '**LaTeX Equation Generator**' redirects to the website `http://latex.topology.htb/equation.php` website.
+* In the '*Software projects*' section, clicking on '**LaTeX Equation Generator**' redirects to the website *`http://latex.topology.htb/equation.php`* website.
 
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/htb-topology/2023-10-14 03_12_23-KaliLinux - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>LaTeX Equation Generator Project</i></center>
@@ -163,17 +163,17 @@ This particular virtual host is secured by a basic authentication mechanism. We 
 #### **<strong><font color="DarkKhaki">latex.topology.htb:</font></strong>**
 ##### **<strong><font color="Orange">Directory Listing enabled:</font></strong>**
 
-* Directory Listing is enabled at http://latex.topology.htb:
+* Directory Listing is enabled at *`http://latex.topology.htb`*:
 
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/htb-topology/2023-10-14 03_16_43-KaliLinux - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>http://latex.topology.htb</i></center>
 <br/>
 
-* The files in this directory don't contain interesting information. With that said, let's proceed to enumerate the `/equation.php` endpoint.
+* The files in this directory doesn't contain interesting information. With that said, let's proceed to enumerate the `/equation.php` endpoint.
 
 ##### **<strong><font color="Orange">/equation.php:</font></strong>**
 
-Navigating to http://latex.topology.htb/equation.php, we are presented with a LaTeX generator, which converts user-supplied mathematical equations into an image (`.png` file). <br/>
+Navigating to *`http://latex.topology.htb/equation.php`*, we are presented with a LaTeX generator, which converts user-supplied mathematical equations into an image (`.png` file). <br/>
 
 <img src="https://raw.githubusercontent.com/YounesTasra-R4z3rSw0rd/YounesTasra-R4z3rSw0rd.github.io/main/assets/img/htb-topology/2023-10-14 03_20_54-KaliLinux - VMware Workstation 17 Player (Non-commercial use only).png">
 <center><i>http://latex.topology.htb/equation.php</i></center>
@@ -584,7 +584,7 @@ $ nc -nlvp 9999
 <center><i>root shell</i></center>
 <br/>
 
-# <strong><font color="Brown">Attack Chain:</font></strong>
+# <strong><font color="Brown">Attack Chain</font></strong>
 
 ***
 
@@ -598,7 +598,7 @@ $ nc -nlvp 9999
 3. After cracking the password hash inside `/var/www/dev/.htpasswd`, I was able to gain access to the server via SSH using the same credentials that were used to access the `dev.topology.htb` virtual host.
 4. Once in, there is a script that runs every minute with root privileges, executing every plot file with a `.plt` extension within the `/opt/gnuplot` directory. To escalate privileges and obtain a root shell on the box, all it takes is writing a malicious plot file that provides a reverse shell when executed.
 
-# <strong><font color="Brown">LaTeX Injection Resources:</font></strong>
+# <strong><font color="Brown">LaTeX Injection Resources</font></strong>
 
 ***
 
