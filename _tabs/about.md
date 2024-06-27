@@ -29,24 +29,44 @@ I recently graduated as an Engineer in Cybersecurity from the National School Of
 
 * <strong>eLearnSecurity Junior Penetration Tester (eJPT)</strong> (<em>Score: 94%</em>)
 
+<iframe src="/assets/img/About/eJPTv2-Certification.pdf" width="800" height="600" allow="autoplay"></iframe>
+
 ## <strong><font color="DarkSlateGray">Extra Training</font></strong>
 
 * Active Directory Enumeration & Attacks — HackTheBox
-* <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-W16NF6ASEA.png" target="_blank">Offensive Security Learning Path</a> — TryHackMe
+* <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-W16NF6ASEA.png" target="_blank">Offensive Pentesting Learning Path</a> — TryHackMe
 * <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-6WCF4ADN1N.png" target="_blank">Jr. Penetration Tester Learning Path</a> — TryHackMe
+
+<div style="display: flex;">
+<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-6WCF4ADN1N.png" alt="" width="500" height="250" style="margin-right: 10px;">
+<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-W16NF6ASEA.png" alt="" width="500" height="250" style="margin-right: 10px;">
+</div>
 
 
 ## <strong><font color="DarkSlateGray">Profiles</font></strong>
 
-| HackTheBox | TryHackMe |
-| --- | --- |
-| ![HTB Badge](https://www.hackthebox.eu/badge/image/970515) | <script src="https://tryhackme.com/badge/1158609"></script> |
-
+<div style="text-align: center; display: flex; justify-content: center; align-items: center;">
+    <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
+        <script src="https://www.hackthebox.eu/badge/970515"></script>
+    </div>
+    <div style="display: inline-block; margin: 0 20px; vertical-align: middle;">
+        <script src="https://tryhackme.com/badge/1158609"></script>
+    </div>
+</div>
 
 ## <strong><font color="DarkSlateGray">Find Me On</font></strong>
-> * <a href="https://www.linkedin.com/in/younes-tasra-95a1a4234/" target="_blank">LinkedIn</a>
+
+<p align="center">
+&nbsp; <a href="https://linkedin.com/in/younes-tasra" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="" height="50" width="50" /></a>
+&nbsp; <a href="https://github.com/YounesTasra-R4z3rSw0rd" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="" height="50" width="50" /></a>
+<a href="https://twitter.com/YounesTasra" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="" height="50" width="50" /></a>
+&nbsp; <a href="https://tryhackme.com/p/R4z3rSw0rd" target="blank"><img align="center" src="https://authenticator.2stable.com/assets/img/2fa-services/Icons/tryhackme.com.svg" alt="" height="50" width="50" /></a>
+&nbsp; <a href="https://app.hackthebox.com/profile/970515" target="blank"><img align="center" src="https://app.hackthebox.com/images/HTB-favicon/favicon.ico" alt="" height="50" width="50" /></a>
+</p>
+
+<!-- > * <a href="https://www.linkedin.com/in/younes-tasra-95a1a4234/" target="_blank">LinkedIn</a>
 > * <a href="https://twitter.com/YounesTasra" target="_blank">Twitter</a>
-> * <a href="https://github.com/YounesTasra-R4z3rSw0rd" target="_blank">GitHub</a>
+> * <a href="https://github.com/YounesTasra-R4z3rSw0rd" target="_blank">GitHub</a> -->
 
 <!-- > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip } -->
