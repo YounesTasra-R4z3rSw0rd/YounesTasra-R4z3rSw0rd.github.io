@@ -2,7 +2,7 @@
 title: TryHackMe | Git Happens
 description: Writeup of a easy-rated Linux Machine from TryHackMe
 date: 2023-06-20 12:00:00 -500
-categories: [TryHackMe, Easy]
+categories: [TryHackMe]
 tags: [Web Exploitation, Git Repository, Sensitive Data Exposure, Information Disclosure, git]
 pin: true
 math: true

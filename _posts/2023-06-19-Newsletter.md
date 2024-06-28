@@ -2,7 +2,7 @@
 title: CyberTalents | Newsletter
 description: Writeup of an easy-rated Web Exploitation Challenge from CyberTalents
 date: 2023-06-19 12:00:00 -500
-categories: [CyberTalents, Medium]
+categories: [CyberTalents]
 tags: [Web Exploitation, Command Injection, Commix, Burpsuite]
 pin: true
 math: true
