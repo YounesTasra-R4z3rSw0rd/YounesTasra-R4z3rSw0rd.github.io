@@ -2,7 +2,7 @@
 title: HackTheBox | Templated
 description: Writeup of a easy-rated Web Exploitation Challenge from HackTheBox
 date: 2023-06-27 12:00:00 -500
-categories: [HackTheBox, Challenge]
+categories: [Challenges, HTB]
 tags: [Web Exploitation, SSTI, RCE, Werkzeug, Flask, Jinja2]
 pin: true
 math: true

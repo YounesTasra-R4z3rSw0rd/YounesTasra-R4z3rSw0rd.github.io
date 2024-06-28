@@ -2,7 +2,7 @@
 title: Web Security Academy | SQL Injection
 description: Writeup of PortSwigger's SQL Injection Labs
 date: 2023-03-02 12:00:00 -500
-categories: [Portswigger, SQL Injection]
+categories: [Web Exploitation, Portswigger, SQL Injection]
 tags: [Web Exploitation, SQL Injection, Python3, sqlmap, Burp Suite, UNION-based SQL Injection]
 pin: true
 math: true

@@ -2,7 +2,7 @@
 title: PicoCTF | More Cookies
 description: Writeup of a Web Exploitation Challenge from PicoCTF
 date: 2022-09-15 12:00:00 -500
-categories: [PicoCTF]
+categories: [Challenges, PicoCTF]
 tags: [PicoCTF2021, Web Exploitation, Cryptography, AES, AES-CBC, AES-ECB, xor, Homomorphic Encryption, Bit-Flipping Attack]
 pin: true
 math: true

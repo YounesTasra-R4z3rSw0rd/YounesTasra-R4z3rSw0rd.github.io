@@ -2,7 +2,7 @@
 title: HackTheBox | Topology
 description: Writeup of an easy-rated Linux machine from HackTheBox
 date: 2023-11-3 03:00:00 -500
-categories: [HackTheBox, Machine]
+categories: [Machines, HackTheBox, Easy]
 tags: [Web Exploitation, Burpsuite, vhost, LaTeX Injection, LFI, .htpasswd, gnuplot, pspy64, Plot File Injection]
 pin: true
 math: true

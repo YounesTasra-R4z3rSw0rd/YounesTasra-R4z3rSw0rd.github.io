@@ -2,7 +2,7 @@
 title: CyberTalents | The Restricted Sessions
 description: Writeup of an medium-rated Web Exploitation Challenge from CyberTalents
 date: 2023-06-18 12:00:00 -500
-categories: [CyberTalents]
+categories: [Challenges, CyberTalents]
 tags: [Web Exploitation, Session Hijacking, Sensitive Data Exposure, cURL, Firefox DevTools]
 pin: true
 math: true
